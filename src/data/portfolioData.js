@@ -17,11 +17,11 @@ export const portfolioData = {
     projectsCompleted: "25+",
     commitmentRate: "100%",
     heroIntro:
-      "Specializing in high-traffic web platforms, cross-platform software solutions, and resilient distributed architectures. I engineer scalable full-stack systems designed to handle high concurrency, massive datasets, and mission-critical workloads.",
-    bio1: "I am an Information Technology professional and developer passionate about building reliable digital products from the ground up. With hands-on experience across the entire software development lifecycle, I specialize in architecting full-stack web platforms and cross-platform mobile apps that solve real business challenges.",
-    bio2: "My approach centers on clean code principles, modular system design, and agile collaboration. Whether engineering responsive client interfaces in React and Next.js, crafting performant mobile apps in Flutter and React Native, or deploying secure RESTful APIs with Node.js and cloud databases, I focus on delivering speed, security, and long-term maintainability.",
+      "Full-Stack Web & Mobile Developer building clean, responsive interfaces backed by solid backend architecture. I don't just focus on visuals — I make sure the server, database, and system performance stay fast, efficient, and reliable under load. Freelancing since 2023.",
+    bio1: "I am a full-stack developer based in the Philippines with a BS in Information Technology. Since starting freelance development in 2023, I've built and delivered custom software solutions — from mission-critical emergency GIS applications to offline desktop grading tools and multi-vendor marketplaces.",
+    bio2: "My focus is simple: clean code, solid database design, and snappy user interfaces. I work across the stack with React, React Native, PHP, Laravel, Node.js, MySQL, Redis, and modern AI engineering workflows using Google Antigravity and Claude AI.",
     quote:
-      "Passionate about turning ideas into efficient code, solving real-world challenges, and delivering software solutions that create real impact.",
+      "Building practical, reliable software that solves real problems and scales smoothly.",
     socials: {
       github: "https://github.com",
     },
@@ -352,26 +352,26 @@ export const portfolioData = {
     {
       id: 1,
       quote:
-        "Delivered our custom grading software with complete offline capabilities and automated report generation ahead of schedule. Outstanding technical execution!",
-      author: "School Academic Coordinator",
-      role: "Client & Institutional Partner",
-      initials: "AC",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      author: "Client / Partner Name",
+      role: "Institutional & Project Partner",
+      initials: "CP",
     },
     {
       id: 2,
       quote:
-        "The real-time incident reporting and emergency command dashboard operated flawlessly during community drills. Highly capable and reliable developer.",
-      author: "MDRRMO Operations Officer",
-      role: "Public Safety Directorate",
-      initials: "OO",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      author: "Operations Lead",
+      role: "Operations & Safety Directorate",
+      initials: "OL",
     },
     {
       id: 3,
       quote:
-        "Transformed our resort reservation process into a sleek, fast web experience with zero booking conflicts. Excellent attention to UI detail and backend logic.",
-      author: "Resort General Manager",
-      role: "Nature Hot Spring Retreat",
-      initials: "GM",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.",
+      author: "Business Manager",
+      role: "Client & Business Partner",
+      initials: "BM",
     },
   ],
 };

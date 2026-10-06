@@ -18,7 +18,7 @@ export const ExperienceSection = ({ experiences = [] }) => (
         />
       </div>
 
-      <div className="relative border-l-2 border-slate-800 ml-4 sm:ml-32 space-y-10 sm:space-y-12">
+      <div className="space-y-6 max-w-4xl mx-auto">
         {experiences.map((exp, idx) => (
           <TimelineItem key={idx} exp={exp} />
         ))}

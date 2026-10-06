@@ -140,31 +140,36 @@ export const ProjectCard = ({ project }) => {
 };
 
 export const TimelineItem = ({ exp }) => (
-  <div className="relative pl-7 sm:pl-10">
-    <div className="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-slate-900 border-2 border-cyan-400 flex items-center justify-center text-cyan-400 text-xs shadow-md">
-      <Briefcase className="w-3.5 h-3.5" />
+  <div className="p-6 sm:p-7 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-3.5 hover:border-slate-700/80 transition-all shadow-xl">
+    {/* Top Label & Badge */}
+    <div className="flex flex-wrap items-center justify-between gap-2">
+      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-cyan-950/70 border border-cyan-800/60 text-xs font-mono text-cyan-400 font-medium">
+        <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+        Freelancer since 2023
+      </span>
+      <Badge variant="section">{exp.type || "FREELANCE"}</Badge>
     </div>
 
-    <span className="sm:absolute sm:-left-36 sm:top-2 text-xs font-mono text-cyan-400 block mb-1.5 sm:mb-0">
-      {exp.period}
-    </span>
-
-    <div className="p-5 sm:p-6 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-3 hover:border-slate-700 transition-all">
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <h3 className="text-base sm:text-lg font-bold text-white">{exp.role}</h3>
-        <Badge variant="section">{exp.type}</Badge>
-      </div>
-      <div className="text-xs sm:text-sm font-medium text-slate-400">
+    {/* Title & Organization */}
+    <div>
+      <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight">{exp.role}</h3>
+      <div className="text-xs sm:text-sm font-medium text-slate-400 mt-1">
         {exp.company} • {exp.location}
       </div>
-      <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-        {exp.desc}
-      </p>
-      <div className="flex flex-wrap gap-1.5 pt-2">
+    </div>
+
+    {/* Description */}
+    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+      {exp.desc}
+    </p>
+
+    {/* Tech Stack Tags */}
+    {exp.tags && exp.tags.length > 0 && (
+      <div className="flex flex-wrap gap-1.5 pt-1.5">
         {exp.tags.map((tag, i) => (
           <Badge key={i} variant="tech">{tag}</Badge>
         ))}
       </div>
-    </div>
+    )}
   </div>
 );

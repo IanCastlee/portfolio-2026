@@ -25,12 +25,12 @@ export const ProjectsSection = ({ projects = [] }) => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div>
             <Badge variant="section" className="mb-3">
-              Some of my projects
+              Featured Work
             </Badge>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
-              Some of my projects
+            <h2 className="text-2xl sm:text-4xl lg:text-[38px] font-bold text-white font-serif tracking-tight">
+              Featured Projects &amp; Shipped Systems
             </h2>
-            <p className="mt-2 sm:mt-3 text-slate-400 text-xs sm:text-base max-w-xl">
+            <p className="mt-2 sm:mt-3 text-slate-400 text-xs sm:text-base max-w-xl font-sans">
               A curated selection of offline-first SaaS platforms, high-concurrency e-commerce marketplaces, real-time emergency disaster systems, and web reservation engines.
             </p>
           </div>
