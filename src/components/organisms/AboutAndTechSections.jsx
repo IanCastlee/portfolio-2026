@@ -15,7 +15,7 @@ export const AboutSection = ({ developer }) => {
           </Badge>
           <SectionHeading 
             title="Crafting Digital Experiences That Deliver Value"
-            subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem."
+            subtitle="A dedicated developer driven by building resilient, user-friendly, and scalable software solutions tailored for real-world impact."
           />
         </div>
 
@@ -42,25 +42,25 @@ export const AboutSection = ({ developer }) => {
               <div className="p-4 rounded-xl bg-slate-800/40 border border-slate-700/60">
                 <Laptop className="w-5 h-5 text-cyan-400 mb-2" />
                 <h4 className="text-white font-semibold text-sm mb-1">Web Development</h4>
-                <p className="text-xs text-slate-400">Lorem ipsum dolor sit amet responsive, fast web apps.</p>
+                <p className="text-xs text-slate-400">Building high-speed, SEO-friendly, and responsive web applications using React, Next.js, and modern CSS.</p>
               </div>
 
               <div className="p-4 rounded-xl bg-slate-800/40 border border-slate-700/60">
                 <Smartphone className="w-5 h-5 text-purple-400 mb-2" />
                 <h4 className="text-white font-semibold text-sm mb-1">Mobile Development</h4>
-                <p className="text-xs text-slate-400">Lorem ipsum cross-platform iOS & Android apps.</p>
+                <p className="text-xs text-slate-400">Engineering smooth, high-performance cross-platform apps for iOS & Android with Flutter and React Native.</p>
               </div>
 
               <div className="p-4 rounded-xl bg-slate-800/40 border border-slate-700/60">
                 <Server className="w-5 h-5 text-emerald-400 mb-2" />
                 <h4 className="text-white font-semibold text-sm mb-1">Backend & APIs</h4>
-                <p className="text-xs text-slate-400">Lorem ipsum secure REST/GraphQL API services.</p>
+                <p className="text-xs text-slate-400">Architecting secure, high-throughput RESTful and GraphQL APIs with microservices using Node.js and Python.</p>
               </div>
 
               <div className="p-4 rounded-xl bg-slate-800/40 border border-slate-700/60">
                 <Shield className="w-5 h-5 text-amber-400 mb-2" />
                 <h4 className="text-white font-semibold text-sm mb-1">IT & System Solutions</h4>
-                <p className="text-xs text-slate-400">Lorem ipsum deployment, databases, and IT systems.</p>
+                <p className="text-xs text-slate-400">Managing cloud infrastructure, relational & NoSQL databases, and automated CI/CD deployment pipelines.</p>
               </div>
             </div>
           </div>
@@ -117,11 +117,11 @@ export const TechStackSection = ({ techStack = [] }) => {
           </Badge>
           <SectionHeading 
             title="My Technology Toolkit"
-            subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Technologies and frameworks I use to develop scalable web and mobile software."
+            subtitle="Core languages, modern frameworks, robust databases, and cloud tools I leverage to build scalable full-stack and mobile solutions."
           />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 sm:gap-6">
           {techStack.map((tech, idx) => (
             <SkillCard key={idx} {...tech} />
           ))}

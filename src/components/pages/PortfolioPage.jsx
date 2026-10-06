@@ -3,13 +3,13 @@ import { MainLayout } from '../templates/MainLayout';
 import { HeroSection } from '../organisms/HeroSection';
 import { AboutSection, TechStackSection } from '../organisms/AboutAndTechSections';
 import { ProjectsSection, CaseStudiesSection } from '../organisms/ProjectsAndCaseStudiesSections';
-import { ExperienceSection, ServicesSection, ProcessSection, GithubSection } from '../organisms/MiddleSections';
+import { ExperienceSection, ServicesSection, ProcessSection } from '../organisms/MiddleSections';
 import { ResumeSection, EducationSection, TestimonialsSection, ContactSection } from '../organisms/EndingSections';
 import { portfolioData } from '../../data/portfolioData';
 
 /**
  * Page: PortfolioPage
- * Composes the entire 14-section portfolio using Atomic Design components.
+ * Composes the entire portfolio using Atomic Design components.
  */
 export const PortfolioPage = () => {
   const { 
@@ -20,9 +20,7 @@ export const PortfolioPage = () => {
     experiences, 
     services, 
     process, 
-    repositories, 
     education, 
-    certifications, 
     testimonials 
   } = portfolioData;
 
@@ -52,19 +50,16 @@ export const PortfolioPage = () => {
       {/* 08. DEVELOPMENT PROCESS SECTION */}
       <ProcessSection process={process} />
 
-      {/* 09. GITHUB & OPEN SOURCE */}
-      <GithubSection repositories={repositories} githubUrl={developer?.socials?.github} />
-
-      {/* 10. RESUME DOWNLOAD SECTION */}
+      {/* 09. RESUME DOWNLOAD SECTION */}
       <ResumeSection />
 
-      {/* 11. EDUCATION & CERTIFICATIONS */}
-      <EducationSection education={education} certifications={certifications} />
+      {/* 10. EDUCATION */}
+      <EducationSection education={education} />
 
-      {/* 12. TESTIMONIALS SECTION */}
+      {/* 11. TESTIMONIALS SECTION */}
       <TestimonialsSection testimonials={testimonials} />
 
-      {/* 13. CONTACT SECTION */}
+      {/* 12. CONTACT SECTION */}
       <ContactSection developer={developer} />
     </MainLayout>
   );

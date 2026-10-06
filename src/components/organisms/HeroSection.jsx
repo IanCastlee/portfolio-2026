@@ -51,10 +51,11 @@ export const HeroSection = ({ developer }) => {
             </div>
           </div>
 
-          {/* Bio paragraph */}
+          {/* Hero Pitch / Hook */}
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl">
-            {developer?.bio1 ||
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."}
+            {developer?.heroIntro ||
+              developer?.bio1 ||
+              "Specializing in modern web systems, intuitive mobile apps, and scalable API architectures. I bridge clean design with robust full-stack engineering to build digital experiences that scale."}
           </p>
 
           {/* Lightweight Tech Chips (Distinct from action buttons) */}

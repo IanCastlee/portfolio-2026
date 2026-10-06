@@ -11,7 +11,9 @@ import {
   FolderGit2, 
   Star, 
   GitFork,
-  Briefcase
+  Briefcase,
+  Sparkles,
+  Bot
 } from 'lucide-react';
 import { Badge } from '../atoms/Badge';
 import { GithubIcon } from '../atoms/SocialIcons';
@@ -25,7 +27,9 @@ export const IconMap = {
   LayoutDashboard,
   Layers,
   Wallet,
-  FolderGit2
+  FolderGit2,
+  Sparkles,
+  Bot
 };
 
 export const SkillCard = ({ category, icon, desc, skills = [] }) => {
@@ -61,13 +65,43 @@ export const ProjectCard = ({ project }) => {
   return (
     <div className="rounded-2xl bg-slate-900/80 border border-slate-800 overflow-hidden hover:border-slate-700 hover:shadow-2xl transition-all duration-300 group flex flex-col justify-between">
       
-      {/* Mockup Preview Header */}
-      <div className="h-52 bg-gradient-to-br from-slate-800/90 via-slate-900 to-indigo-950/40 relative flex flex-col items-center justify-center p-6 border-b border-slate-800">
-        <div className="w-14 h-14 rounded-2xl bg-slate-800/80 border border-slate-700 flex items-center justify-center text-cyan-400 shadow-md group-hover:scale-110 transition-transform">
-          <IconComponent className="w-7 h-7" />
-        </div>
-        <span className="mt-3 text-xs font-mono text-slate-400">[Project Mockup / Preview Screenshot]</span>
-        <Badge variant={project.badgeColor || 'cyan'} className="absolute top-4 left-4">
+      {/* Mockup / Real Screenshot Preview Header */}
+      <div className="h-60 sm:h-64 bg-slate-950 relative overflow-hidden border-b border-slate-800 flex items-center justify-center group">
+        {project.mobileImage && project.image ? (
+          <div className="w-full h-full relative flex items-center justify-center overflow-hidden">
+            {/* PC Desktop Background */}
+            <img 
+              src={project.image} 
+              alt={`${project.title} Desktop`} 
+              className="absolute inset-0 w-full h-full object-cover object-top opacity-40 blur-[1.5px] scale-105 group-hover:scale-110 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-slate-950/30"></div>
+            
+            {/* Mobile App in Center */}
+            <img 
+              src={project.mobileImage} 
+              alt={`${project.title} Mobile`} 
+              className="relative z-10 h-[92%] object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        ) : project.image ? (
+          <div className="w-full h-full relative overflow-hidden group">
+            <img 
+              src={project.image} 
+              alt={project.title} 
+              className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          </div>
+        ) : (
+          <div className="flex flex-col items-center justify-center p-6 text-center">
+            <div className="w-14 h-14 rounded-2xl bg-slate-800/80 border border-slate-700 flex items-center justify-center text-cyan-400 shadow-md group-hover:scale-110 transition-transform">
+              <IconComponent className="w-7 h-7" />
+            </div>
+            <span className="mt-3 text-xs font-mono text-slate-400">[Project Mockup / Preview Screenshot]</span>
+          </div>
+        )}
+        <Badge variant={project.badgeColor || 'cyan'} className="absolute top-4 left-4 z-20 shadow-md backdrop-blur-md">
           {project.category}
         </Badge>
       </div>

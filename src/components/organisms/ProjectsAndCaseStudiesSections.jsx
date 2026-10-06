@@ -6,11 +6,17 @@ import { ProjectCard } from '../molecules/SkillAndProjectMolecules';
 export const ProjectsSection = ({ projects = [] }) => {
   const [activeFilter, setActiveFilter] = useState('All');
 
-  const filters = ['All', 'Web App', 'Mobile App', 'Full-Stack System', 'FinTech App'];
+  const filters = ['All', 'Desktop & SaaS', 'Web App', 'Mobile App', 'Full-Stack System'];
 
   const filteredProjects = activeFilter === 'All' 
     ? projects 
-    : projects.filter(p => p.category === activeFilter);
+    : projects.filter(p => {
+        if (activeFilter === 'Desktop & SaaS') return p.category.includes('Desktop') || p.category.includes('SaaS');
+        if (activeFilter === 'Web App') return p.category.includes('Web');
+        if (activeFilter === 'Mobile App') return p.category.includes('Mobile');
+        if (activeFilter === 'Full-Stack System') return p.category.includes('Full-Stack') || p.category.includes('Emergency');
+        return p.category === activeFilter;
+      });
 
   return (
     <section id="projects" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-slate-800/60 bg-slate-900/20">
@@ -19,13 +25,13 @@ export const ProjectsSection = ({ projects = [] }) => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div>
             <Badge variant="section" className="mb-3">
-              Section 04: Featured Projects — Showcase of Key Works
+              Some of my projects
             </Badge>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
-              Featured Work & Systems
+              Some of my projects
             </h2>
             <p className="mt-2 sm:mt-3 text-slate-400 text-xs sm:text-base max-w-xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Explore recent software and mobile applications.
+              A curated selection of offline-first SaaS platforms, high-concurrency e-commerce marketplaces, real-time emergency disaster systems, and web reservation engines.
             </p>
           </div>
 
@@ -70,7 +76,7 @@ export const CaseStudiesSection = ({ caseStudy }) => {
           </Badge>
           <SectionHeading 
             title="Engineering Case Study"
-            subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. A deep dive into how I tackle complex engineering constraints."
+            subtitle="A deep dive into how I tackle complex engineering constraints, high concurrency spikes, and real-time data synchronization."
           />
         </div>
 

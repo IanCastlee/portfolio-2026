@@ -53,7 +53,7 @@ export const TerminalCard = ({ developer }) => {
       <div className="p-4 sm:p-5 font-mono text-xs sm:text-sm overflow-x-auto select-text leading-relaxed">
         {activeTab === 'profile.ts' ? (
           <div className="space-y-1">
-            <p className="text-slate-500 text-[11px]">// IT & Mobile App Engineer</p>
+            <p className="text-slate-500 text-[11px]">// IT Web & Mobile App Developer</p>
             <p>
               <span className="text-purple-400">const</span>{' '}
               <span className="text-cyan-400">engineer</span>{' '}
@@ -61,15 +61,15 @@ export const TerminalCard = ({ developer }) => {
             </p>
             <p className="pl-3 sm:pl-4">
               <span className="text-slate-400">name:</span>{' '}
-              <span className="text-emerald-400">"{developer?.name || '[Your Name]'}"</span>,
+              <span className="text-emerald-400">"{developer?.name || 'Ian Castillo'}"</span>,
             </p>
             <p className="pl-3 sm:pl-4">
               <span className="text-slate-400">title:</span>{' '}
-              <span className="text-emerald-400">"Full-Stack & Mobile"</span>,
+              <span className="text-emerald-400">"Full-Stack & Mobile Developer"</span>,
             </p>
             <p className="pl-3 sm:pl-4">
               <span className="text-slate-400">focus:</span>{' '}
-              <span className="text-emerald-400">["React", "Flutter", "Node.js"]</span>,
+              <span className="text-emerald-400">["React", "React Native", "PHP", "Laravel", "Node.js"]</span>,
             </p>
             <p className="pl-3 sm:pl-4">
               <span className="text-slate-400">status:</span>{' '}
@@ -81,17 +81,23 @@ export const TerminalCard = ({ developer }) => {
             </p>
           </div>
         ) : (
-          <div className="space-y-1 text-slate-300">
+          <div className="space-y-1 text-slate-300 text-xs">
             <p className="text-slate-500 text-[11px]">// Core Tech Ecosystem</p>
             <p className="text-purple-400">{'{'}</p>
             <p className="pl-3 sm:pl-4">
-              <span className="text-cyan-300">"mobile"</span>: <span className="text-emerald-400">["Flutter", "React Native"]</span>,
+              <span className="text-cyan-300">"frontend"</span>: <span className="text-emerald-400">["React", "Tailwind CSS", "TypeScript"]</span>,
             </p>
             <p className="pl-3 sm:pl-4">
-              <span className="text-cyan-300">"web"</span>: <span className="text-emerald-400">["Next.js", "React", "Tailwind"]</span>,
+              <span className="text-cyan-300">"mobile"</span>: <span className="text-emerald-400">["React Native", "Expo SDK 54"]</span>,
             </p>
             <p className="pl-3 sm:pl-4">
-              <span className="text-cyan-300">"backend"</span>: <span className="text-emerald-400">["Node.js", "Python", "PostgreSQL"]</span>
+              <span className="text-cyan-300">"backend"</span>: <span className="text-emerald-400">["PHP", "Laravel", "Node.js", "REST APIs"]</span>,
+            </p>
+            <p className="pl-3 sm:pl-4">
+              <span className="text-cyan-300">"database"</span>: <span className="text-emerald-400">["MySQL", "Supabase", "Redis", "SQLite"]</span>,
+            </p>
+            <p className="pl-3 sm:pl-4">
+              <span className="text-cyan-300">"ai_tools"</span>: <span className="text-emerald-400">["Google Antigravity", "Claude AI"]</span>
             </p>
             <p className="text-purple-400">{'}'}</p>
           </div>

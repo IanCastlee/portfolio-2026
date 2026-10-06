@@ -19,7 +19,7 @@ import { Button } from '../atoms/Button';
 import { SectionHeading } from '../atoms/Typography';
 import { Input, Textarea, Select } from '../atoms/Input';
 import { TestimonialCard } from '../molecules/FeatureMolecules';
-import { GithubIcon, LinkedinIcon, TwitterIcon } from '../atoms/SocialIcons';
+import { GithubIcon } from '../atoms/SocialIcons';
 
 export const ResumeSection = () => (
   <section id="resume" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-800/60 bg-gradient-to-r from-blue-950/20 via-slate-900 to-purple-950/20">
@@ -31,7 +31,7 @@ export const ResumeSection = () => (
           Looking for My Full Professional CV?
         </h2>
         <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Download a comprehensive overview of my technical abilities and work history in PDF format.
+          Download a comprehensive overview of my technical stack, project history, database architecture experience, and verified credentials.
         </p>
       </div>
 
@@ -48,74 +48,46 @@ export const ResumeSection = () => (
   </section>
 );
 
-export const EducationSection = ({ education = [], certifications = [] }) => (
+export const EducationSection = ({ education = [] }) => (
   <section id="education" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-slate-800/60">
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-4xl mx-auto">
       
       <div className="text-center mb-12 sm:mb-16">
         <Badge variant="section" className="mb-3">
-          Section 11: Education & Certifications — Credentials
+          Education & Degree
         </Badge>
         <SectionHeading 
-          title="Education & Certifications"
-          subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Formal IT degree and verified certifications."
+          title="Academic Background"
+          subtitle="Formal IT degree and educational foundation in software engineering and computing."
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-        
-        {/* Education Column */}
-        <div className="p-6 sm:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-5">
-          <h3 className="text-lg sm:text-xl font-bold text-white flex items-center gap-2.5">
-            <span className="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm">
-              <GraduationCap className="w-4 h-4" />
-            </span>
-            Academic Background
-          </h3>
-
-          <div className="space-y-4">
-            {education.map((edu, idx) => (
-              <div key={idx} className="p-4 rounded-xl bg-slate-800/40 border border-slate-700/60">
-                <div className="flex items-center justify-between text-xs font-mono text-cyan-400 mb-1">
-                  <span>{edu.period}</span>
-                  <span>{edu.honors}</span>
-                </div>
-                <h4 className="text-sm sm:text-base font-bold text-white">{edu.degree}</h4>
-                <div className="text-xs text-slate-400 mt-0.5">{edu.institution}</div>
-                <p className="text-xs text-slate-300 mt-2 leading-relaxed">
-                  {edu.desc}
-                </p>
-              </div>
-            ))}
+      <div className="p-6 sm:p-8 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-5 shadow-xl">
+        <div className="flex items-center gap-2.5">
+          <span className="w-9 h-9 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm">
+            <GraduationCap className="w-5 h-5" />
+          </span>
+          <div>
+            <h3 className="text-lg sm:text-xl font-bold text-white">Academic Qualifications</h3>
+            <span className="text-xs text-slate-400 font-mono">Verified College Degree</span>
           </div>
         </div>
 
-        {/* Certifications Column */}
-        <div className="p-6 sm:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-5">
-          <h3 className="text-lg sm:text-xl font-bold text-white flex items-center gap-2.5">
-            <span className="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-sm">
-              <Award className="w-4 h-4" />
-            </span>
-            Certificates & Licenses
-          </h3>
-
-          <div className="space-y-3">
-            {certifications.map((cert, idx) => (
-              <div key={idx} className="p-3.5 rounded-xl bg-slate-800/40 border border-slate-700/60 flex items-center justify-between gap-3">
-                <div>
-                  <h4 className="text-xs sm:text-sm font-bold text-white">{cert.title}</h4>
-                  <div className="text-[11px] text-slate-400 font-mono">
-                    {cert.issuer} • {cert.year}
-                  </div>
-                </div>
-                <span className="text-cyan-400 text-xs font-mono flex items-center gap-1 shrink-0">
-                  <CheckCircle2 className="w-3.5 h-3.5" /> Verified
-                </span>
+        <div className="space-y-4">
+          {education.map((edu, idx) => (
+            <div key={idx} className="p-5 rounded-xl bg-slate-800/40 border border-slate-700/60">
+              <div className="flex flex-wrap items-center justify-between text-xs font-mono text-cyan-400 mb-1.5 gap-2">
+                <span>{edu.period}</span>
+                <span className="px-2 py-0.5 rounded bg-cyan-950/80 border border-cyan-800 text-cyan-300 text-[11px]">{edu.honors}</span>
               </div>
-            ))}
-          </div>
+              <h4 className="text-base sm:text-lg font-bold text-white">{edu.degree}</h4>
+              <div className="text-xs text-slate-400 mt-1">{edu.institution}</div>
+              <p className="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+                {edu.desc}
+              </p>
+            </div>
+          ))}
         </div>
-
       </div>
 
     </div>
@@ -132,7 +104,7 @@ export const TestimonialsSection = ({ testimonials = [] }) => (
         </Badge>
         <SectionHeading 
           title="What Clients & Colleagues Say"
-          subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Recommendations and peer endorsements."
+          subtitle="Feedback, peer endorsements, and real collaboration experiences."
         />
       </div>
 
@@ -178,7 +150,7 @@ export const ContactSection = ({ developer }) => {
           </Badge>
           <SectionHeading 
             title="Let's Build Something Great Together"
-            subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Have a project or hiring opportunity? Reach out anytime!"
+            subtitle="Have a project in mind, need software architecture consulting, or exploring a hiring opportunity? Reach out anytime!"
           />
         </div>
 
@@ -232,20 +204,21 @@ export const ContactSection = ({ developer }) => {
               </div>
 
               {/* Social Links Box */}
-              <div className="pt-4 border-t border-slate-800">
-                <div className="text-[10px] font-mono text-slate-400 uppercase mb-3">Professional Networks</div>
-                <div className="flex gap-2.5">
-                  <a href={developer?.socials?.linkedin} target="_blank" rel="noopener noreferrer" className="flex-1 py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs text-center text-slate-200 font-medium transition-all flex items-center justify-center gap-1.5">
-                    <LinkedinIcon className="w-3.5 h-3.5 text-blue-400" /> LinkedIn
-                  </a>
-                  <a href={developer?.socials?.github} target="_blank" rel="noopener noreferrer" className="flex-1 py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs text-center text-slate-200 font-medium transition-all flex items-center justify-center gap-1.5">
-                    <GithubIcon className="w-3.5 h-3.5" /> GitHub
-                  </a>
-                  <a href={developer?.socials?.twitter} target="_blank" rel="noopener noreferrer" className="flex-1 py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs text-center text-slate-200 font-medium transition-all flex items-center justify-center gap-1.5">
-                    <TwitterIcon className="w-3.5 h-3.5 text-sky-400" /> Twitter
-                  </a>
+              {developer?.socials?.github && (
+                <div className="pt-4 border-t border-slate-800">
+                  <div className="text-[10px] font-mono text-slate-400 uppercase mb-3">Online Profiles</div>
+                  <div>
+                    <a 
+                      href={developer.socials.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs text-center text-slate-200 font-medium transition-all flex items-center justify-center gap-2 hover:text-white"
+                    >
+                      <GithubIcon className="w-4 h-4 text-white" /> View GitHub Profile
+                    </a>
+                  </div>
                 </div>
-              </div>
+              )}
 
             </div>
           </div>
