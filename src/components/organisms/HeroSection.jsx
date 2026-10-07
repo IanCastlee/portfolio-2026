@@ -13,7 +13,7 @@ export const HeroSection = ({ developer }) => {
   return (
     <section
       id="hero"
-      className="relative min-h-[calc(100vh-5rem)] flex items-center pt-28 pb-14 sm:pt-32 sm:pb-16 lg:pt-32 lg:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative min-h-[calc(100vh-5.5rem)] flex items-center pt-24 pb-6 sm:pt-28 sm:pb-8 lg:pt-24 lg:pb-10 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       {/* Ambient background glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 sm:w-[500px] sm:h-[500px] bg-gradient-to-tr from-blue-600/15 via-cyan-500/15 to-purple-600/15 rounded-full blur-3xl pointer-events-none -z-10" />
