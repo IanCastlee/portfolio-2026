@@ -13,15 +13,15 @@ export const HeroSection = ({ developer }) => {
   return (
     <section
       id="hero"
-      className="relative min-h-[calc(100vh-4.5rem)] flex items-center pt-24 pb-10 sm:pt-28 sm:pb-14 lg:pt-24 lg:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative min-h-[calc(100vh-5rem)] flex items-center pt-28 pb-14 sm:pt-32 sm:pb-16 lg:pt-32 lg:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       {/* Ambient background glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 sm:w-[500px] sm:h-[500px] bg-gradient-to-tr from-blue-600/15 via-cyan-500/15 to-purple-600/15 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute -top-10 -right-10 w-60 h-60 bg-cyan-500/10 rounded-full blur-2xl pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         {/* Left Column: Hero Intro Content */}
-        <div className="lg:col-span-7 space-y-4 sm:space-y-4.5 text-left">
+        <div className="lg:col-span-7 space-y-4.5 sm:space-y-5 text-left">
           {/* Status Badge */}
           <div className="flex items-center gap-2">
             <Badge
@@ -34,8 +34,8 @@ export const HeroSection = ({ developer }) => {
           </div>
 
           {/* Main Headline */}
-          <div className="space-y-1.5">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-serif tracking-tight leading-[1.14]">
+          <div className="space-y-1.5 sm:space-y-2">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-serif tracking-tight leading-[1.15]">
               Building practical web &amp; mobile software that delivers.
             </h1>
 
