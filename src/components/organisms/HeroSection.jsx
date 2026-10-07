@@ -25,7 +25,7 @@ export const HeroSection = ({ developer }) => {
               pulse={true}
               className="text-[11px] sm:text-xs font-mono"
             >
-              ● Available for Freelance &amp; Full-Time Contracts
+              Available for Freelance &amp; Full-Time Contracts
             </Badge>
           </div>
 
