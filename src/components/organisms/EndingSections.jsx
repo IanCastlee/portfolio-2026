@@ -22,15 +22,15 @@ import { TestimonialCard } from '../molecules/FeatureMolecules';
 import { GithubIcon } from '../atoms/SocialIcons';
 
 export const ResumeSection = () => (
-  <section id="resume" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-800/60 bg-gradient-to-r from-blue-950/20 via-slate-900 to-purple-950/20">
-    <div className="max-w-5xl mx-auto rounded-3xl bg-slate-900/90 border border-slate-700/80 p-6 sm:p-10 lg:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
+  <section id="resume" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/60 bg-gradient-to-r from-blue-50 via-slate-50 to-purple-50 dark:from-blue-950/20 dark:via-slate-900 dark:to-purple-950/20">
+    <div className="max-w-5xl mx-auto rounded-3xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-700/80 p-6 sm:p-10 lg:p-12 shadow-xl dark:shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
       
       <div className="space-y-2.5 text-center md:text-left max-w-xl">
         <Badge variant="section">Section 10: Resume — Download Curriculum Vitae</Badge>
-        <h2 className="text-xl sm:text-3xl font-extrabold text-white">
+        <h2 className="text-xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
           Looking for My Full Professional CV?
         </h2>
-        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+        <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed">
           Download a comprehensive overview of my technical stack, project history, database architecture experience, and verified credentials.
         </p>
       </div>
@@ -49,12 +49,12 @@ export const ResumeSection = () => (
 );
 
 export const EducationSection = ({ education = [] }) => (
-  <section id="education" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-slate-800/60">
+  <section id="education" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/60">
     <div className="max-w-4xl mx-auto">
       
       <div className="text-center mb-12 sm:mb-16">
         <Badge variant="section" className="mb-3">
-          Education & Degree
+          Education &amp; Degree
         </Badge>
         <SectionHeading 
           title="Academic Background"
@@ -62,27 +62,27 @@ export const EducationSection = ({ education = [] }) => (
         />
       </div>
 
-      <div className="p-6 sm:p-8 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-5 shadow-xl">
+      <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 space-y-5 shadow-xl">
         <div className="flex items-center gap-2.5">
-          <span className="w-9 h-9 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-sm">
+          <span className="w-9 h-9 rounded-xl bg-blue-50 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center text-sm">
             <GraduationCap className="w-5 h-5" />
           </span>
           <div>
-            <h3 className="text-lg sm:text-xl font-bold text-white">Academic Qualifications</h3>
-            <span className="text-xs text-slate-400 font-mono">Verified College Degree</span>
+            <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Academic Qualifications</h3>
+            <span className="text-xs text-slate-500 dark:text-slate-400 font-mono">Verified College Degree</span>
           </div>
         </div>
 
         <div className="space-y-4">
           {education.map((edu, idx) => (
-            <div key={idx} className="p-5 rounded-xl bg-slate-800/40 border border-slate-700/60">
-              <div className="flex flex-wrap items-center justify-between text-xs font-mono text-cyan-400 mb-1.5 gap-2">
+            <div key={idx} className="p-5 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700/60">
+              <div className="flex flex-wrap items-center justify-between text-xs font-mono text-cyan-700 dark:text-cyan-400 mb-1.5 gap-2">
                 <span>{edu.period}</span>
-                <span className="px-2 py-0.5 rounded bg-cyan-950/80 border border-cyan-800 text-cyan-300 text-[11px]">{edu.honors}</span>
+                <span className="px-2 py-0.5 rounded bg-cyan-100 dark:bg-cyan-950/80 border border-cyan-300 dark:border-cyan-800 text-cyan-800 dark:text-cyan-300 text-[11px] font-semibold">{edu.honors}</span>
               </div>
-              <h4 className="text-base sm:text-lg font-bold text-white">{edu.degree}</h4>
-              <div className="text-xs text-slate-400 mt-1">{edu.institution}</div>
-              <p className="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+              <h4 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">{edu.degree}</h4>
+              <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">{edu.institution}</div>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
                 {edu.desc}
               </p>
             </div>
@@ -95,7 +95,7 @@ export const EducationSection = ({ education = [] }) => (
 );
 
 export const TestimonialsSection = ({ testimonials = [] }) => (
-  <section id="testimonials" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-slate-800/60 bg-slate-900/20">
+  <section id="testimonials" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/60 bg-slate-50 dark:bg-slate-900/20">
     <div className="max-w-7xl mx-auto">
       
       <div className="text-center mb-12 sm:mb-16">
@@ -103,7 +103,7 @@ export const TestimonialsSection = ({ testimonials = [] }) => (
           Section 12: Testimonials — Stakeholder Feedback
         </Badge>
         <SectionHeading 
-          title="What Clients & Colleagues Say"
+          title="What Clients &amp; Colleagues Say"
           subtitle="Feedback, peer endorsements, and real collaboration experiences."
         />
       </div>
@@ -141,7 +141,7 @@ export const ContactSection = ({ developer }) => {
   };
 
   return (
-    <section id="contact" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-slate-800/60">
+    <section id="contact" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/60">
       <div className="max-w-7xl mx-auto">
         
         <div className="text-center mb-12 sm:mb-16">
@@ -158,63 +158,63 @@ export const ContactSection = ({ developer }) => {
           
           {/* Contact Details */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-6 sm:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-6">
-              <h3 className="text-lg sm:text-xl font-bold text-white">Contact Information</h3>
+            <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 space-y-6 shadow-md dark:shadow-none">
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Contact Information</h3>
               
               <div className="space-y-3.5">
                 {/* Email with copy button */}
-                <div className="flex items-center justify-between p-3 rounded-xl bg-slate-800/40 border border-slate-700/60">
+                <div className="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700/60">
                   <div className="flex items-center gap-3 min-w-0">
-                    <div className="w-9 h-9 rounded-lg bg-blue-500/10 text-cyan-400 flex items-center justify-center shrink-0">
+                    <div className="w-9 h-9 rounded-lg bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-cyan-400 flex items-center justify-center shrink-0">
                       <Mail className="w-4 h-4" />
                     </div>
                     <div className="min-w-0 truncate">
-                      <div className="text-[10px] text-slate-400 font-mono">Email Address</div>
-                      <div className="text-xs sm:text-sm text-white font-medium truncate">
+                      <div className="text-[10px] text-slate-500 dark:text-slate-400 font-mono">Email Address</div>
+                      <div className="text-xs sm:text-sm text-slate-900 dark:text-white font-medium truncate">
                         {developer?.email}
                       </div>
                     </div>
                   </div>
-                  <button onClick={copyEmail} className="p-2 text-slate-400 hover:text-cyan-400 transition-colors" title="Copy email">
-                    {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+                  <button onClick={copyEmail} className="p-2 text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors cursor-pointer" title="Copy email">
+                    {copied ? <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> : <Copy className="w-4 h-4" />}
                   </button>
                 </div>
 
                 {/* Phone */}
-                <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-700/60">
-                  <div className="w-9 h-9 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700/60">
+                  <div className="w-9 h-9 rounded-lg bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-[10px] text-slate-400 font-mono">Phone / WhatsApp</div>
-                    <div className="text-xs sm:text-sm text-white font-medium">{developer?.phone}</div>
+                    <div className="text-[10px] text-slate-500 dark:text-slate-400 font-mono">Phone / WhatsApp</div>
+                    <div className="text-xs sm:text-sm text-slate-900 dark:text-white font-medium">{developer?.phone}</div>
                   </div>
                 </div>
 
                 {/* Location */}
-                <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-700/60">
-                  <div className="w-9 h-9 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0">
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700/60">
+                  <div className="w-9 h-9 rounded-lg bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-[10px] text-slate-400 font-mono">Location</div>
-                    <div className="text-xs sm:text-sm text-white font-medium">{developer?.location}</div>
+                    <div className="text-[10px] text-slate-500 dark:text-slate-400 font-mono">Location</div>
+                    <div className="text-xs sm:text-sm text-slate-900 dark:text-white font-medium">{developer?.location}</div>
                   </div>
                 </div>
               </div>
 
               {/* Social Links Box */}
               {developer?.socials?.github && (
-                <div className="pt-4 border-t border-slate-800">
-                  <div className="text-[10px] font-mono text-slate-400 uppercase mb-3">Online Profiles</div>
+                <div className="pt-4 border-t border-slate-200 dark:border-slate-800">
+                  <div className="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase mb-3">Online Profiles</div>
                   <div>
                     <a 
                       href={developer.socials.github} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs text-center text-slate-200 font-medium transition-all flex items-center justify-center gap-2 hover:text-white"
+                      className="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 text-xs text-center text-slate-800 dark:text-slate-200 font-medium transition-all flex items-center justify-center gap-2 hover:text-slate-900 dark:hover:text-white"
                     >
-                      <GithubIcon className="w-4 h-4 text-white" /> View GitHub Profile
+                      <GithubIcon className="w-4 h-4 text-slate-800 dark:text-white" /> View GitHub Profile
                     </a>
                   </div>
                 </div>
@@ -225,7 +225,7 @@ export const ContactSection = ({ developer }) => {
 
           {/* Form */}
           <div className="lg:col-span-7">
-            <form onSubmit={handleSubmit} className="p-6 sm:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4 sm:space-y-5">
+            <form onSubmit={handleSubmit} className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 space-y-4 sm:space-y-5 shadow-md dark:shadow-none">
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Input label="Your Name" id="name" required placeholder="John Doe" />
@@ -264,7 +264,7 @@ export const ContactSection = ({ developer }) => {
               </Button>
 
               {sent && (
-                <div className="p-3.5 rounded-xl bg-emerald-950/60 border border-emerald-800 text-emerald-300 text-xs text-center font-mono animate-fadeIn">
+                <div className="p-3.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs text-center font-mono animate-fadeIn">
                   ✓ Message sent successfully! I will respond to your inquiry shortly.
                 </div>
               )}
@@ -279,28 +279,28 @@ export const ContactSection = ({ developer }) => {
 };
 
 export const Footer = ({ developer }) => (
-  <footer className="border-t border-slate-800 bg-[#070b14] py-10 px-4 sm:px-6 lg:px-8">
+  <footer className="border-t border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-[#070b14] py-10 px-4 sm:px-6 lg:px-8 transition-colors">
     <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
       
       <div className="flex items-center gap-2.5">
         <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white font-mono font-bold text-xs">
           <Code2 className="w-3.5 h-3.5" />
         </div>
-        <div className="text-xs text-slate-400 font-mono">
-          © {new Date().getFullYear()} <strong className="text-white">{developer?.name || '[Your Name]'}</strong>. Section 14: Footer.
+        <div className="text-xs text-slate-600 dark:text-slate-400 font-mono">
+          © {new Date().getFullYear()} <strong className="text-slate-900 dark:text-white">{developer?.name || 'Ian Castillo'}</strong>. Section 14: Footer.
         </div>
       </div>
 
-      <div className="flex items-center space-x-5 text-xs text-slate-400 font-mono">
-        <a href="#hero" className="hover:text-cyan-400 transition-colors">Home</a>
-        <a href="#about" className="hover:text-cyan-400 transition-colors">About</a>
-        <a href="#projects" className="hover:text-cyan-400 transition-colors">Projects</a>
-        <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact</a>
+      <div className="flex items-center space-x-5 text-xs text-slate-600 dark:text-slate-400 font-mono">
+        <a href="#about" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">About</a>
+        <a href="#tech-stack" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Tech Stack</a>
+        <a href="#projects" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Projects</a>
+        <a href="#contact" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Contact</a>
       </div>
 
       <a
-        href="#hero"
-        className="w-9 h-9 rounded-xl bg-slate-800/80 border border-slate-700 hover:border-cyan-400 text-slate-300 hover:text-white flex items-center justify-center transition-all"
+        href="#about"
+        className="w-9 h-9 rounded-xl bg-white hover:bg-slate-50 dark:bg-slate-800/80 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 hover:border-cyan-500 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition-all shadow-sm cursor-pointer"
         title="Back to top"
       >
         <ChevronUp className="w-4 h-4" />

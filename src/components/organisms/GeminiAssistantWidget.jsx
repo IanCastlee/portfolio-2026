@@ -101,7 +101,7 @@ export const GeminiAssistantWidget = () => {
     setMessages(INITIAL_MESSAGES);
   };
 
-  // Helper to format basic markdown (bold, links, bullet points)
+  // Helper to format basic markdown
   const renderFormattedText = (content) => {
     return (
       <div className="space-y-1.5 text-xs sm:text-sm leading-relaxed whitespace-pre-wrap">
@@ -117,9 +117,9 @@ export const GeminiAssistantWidget = () => {
         {!isOpen && (
           <div 
             onClick={() => setIsOpen(true)}
-            className="cursor-pointer flex items-center gap-2 px-3.5 py-2 rounded-full bg-slate-900/95 border border-cyan-500/40 text-cyan-300 text-xs font-mono shadow-xl backdrop-blur-md hover:border-cyan-400 transition-all active:scale-95"
+            className="cursor-pointer flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/95 dark:bg-slate-900/95 border border-cyan-500/40 text-cyan-700 dark:text-cyan-300 text-xs font-mono shadow-xl backdrop-blur-md hover:border-cyan-500 transition-all active:scale-95"
           >
-            <Sparkles className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
+            <Sparkles className="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400 animate-pulse" />
             <span className="font-semibold tracking-wide">AI Chatbot</span>
           </div>
         )}
@@ -127,7 +127,7 @@ export const GeminiAssistantWidget = () => {
         <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle AI Chatbot"
-          className="relative group p-3.5 sm:p-4 rounded-full bg-gradient-to-tr from-blue-600 via-cyan-500 to-purple-600 text-white shadow-[0_0_25px_rgba(6,182,212,0.4)] hover:shadow-[0_0_35px_rgba(6,182,212,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center"
+          className="relative group p-3.5 sm:p-4 rounded-full bg-gradient-to-tr from-blue-600 via-cyan-500 to-purple-600 text-white shadow-[0_0_25px_rgba(6,182,212,0.4)] hover:shadow-[0_0_35px_rgba(6,182,212,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center cursor-pointer"
         >
           {isOpen ? (
             <X className="w-6 h-6" />
@@ -143,21 +143,21 @@ export const GeminiAssistantWidget = () => {
 
       {/* Floating Chat Modal (Full-Screen on Mobile, Floating Card on Desktop) */}
       {isOpen && (
-        <div className="fixed inset-0 sm:inset-auto sm:bottom-24 sm:right-6 z-50 w-full h-full sm:w-[440px] sm:h-[580px] sm:max-h-[calc(100vh-8rem)] rounded-none sm:rounded-2xl bg-slate-950/98 sm:bg-slate-950/95 border-0 sm:border sm:border-slate-800 shadow-2xl backdrop-blur-xl flex flex-col overflow-hidden animate-in fade-in duration-200">
+        <div className="fixed inset-0 sm:inset-auto sm:bottom-24 sm:right-6 z-50 w-full h-full sm:w-[440px] sm:h-[580px] sm:max-h-[calc(100vh-8rem)] rounded-none sm:rounded-2xl bg-white/98 dark:bg-slate-950/98 sm:bg-white/95 sm:dark:bg-slate-950/95 border-0 sm:border sm:border-slate-200 sm:dark:border-slate-800 shadow-2xl backdrop-blur-xl flex flex-col overflow-hidden animate-in fade-in duration-200">
           
           {/* Header */}
-          <div className="px-4 py-3 sm:py-3.5 bg-slate-900/95 border-b border-slate-800 flex items-center justify-between sticky top-0 z-10">
+          <div className="px-4 py-3 sm:py-3.5 bg-slate-50 dark:bg-slate-900/95 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between sticky top-0 z-10">
             <div className="flex items-center gap-2.5">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-md">
                 <Bot className="w-5 h-5" />
               </div>
               <div>
                 <div className="flex items-center gap-1.5">
-                  <h3 className="text-sm font-bold text-white">Eyhan AI</h3>
-                  <span className="px-1.5 py-0.2 rounded text-[10px] font-mono bg-cyan-950 border border-cyan-800 text-cyan-300 font-semibold">Gemini</span>
+                  <h3 className="text-sm font-bold text-slate-900 dark:text-white">Eyhan AI</h3>
+                  <span className="px-1.5 py-0.2 rounded text-[10px] font-mono bg-cyan-100 dark:bg-cyan-950 border border-cyan-300 dark:border-cyan-800 text-cyan-800 dark:text-cyan-300 font-semibold">Gemini</span>
                 </div>
-                <span className="text-[11px] text-slate-400 flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span className="text-[11px] text-slate-500 dark:text-slate-400 flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400"></span>
                   AI Chatbot • Online
                 </span>
               </div>
@@ -169,7 +169,7 @@ export const GeminiAssistantWidget = () => {
                 <button
                   onClick={handleClearConversation}
                   title="Clear conversation history"
-                  className="flex items-center gap-1 px-2.5 py-1 text-[11px] font-mono text-slate-400 hover:text-red-400 rounded-lg hover:bg-slate-800/90 border border-slate-800 hover:border-red-900/40 transition-colors"
+                  className="flex items-center gap-1 px-2.5 py-1 text-[11px] font-mono text-slate-500 hover:text-red-500 dark:text-slate-400 dark:hover:text-red-400 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800/90 border border-slate-200 dark:border-slate-800 transition-colors cursor-pointer"
                 >
                   <Trash2 className="w-3.5 h-3.5" />
                   <span>Clear</span>
@@ -180,7 +180,7 @@ export const GeminiAssistantWidget = () => {
               <button
                 onClick={() => setIsOpen(false)}
                 title="Close chat"
-                className="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
+                className="p-1.5 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -188,30 +188,30 @@ export const GeminiAssistantWidget = () => {
           </div>
 
           {/* Chat Messages Body */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 text-xs sm:text-sm scrollbar-thin scrollbar-thumb-slate-800">
+          <div className="flex-1 overflow-y-auto p-4 space-y-4 text-xs sm:text-sm scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-800 bg-slate-50/50 dark:bg-transparent">
             {messages.map((msg, index) => (
               <div
                 key={index}
                 className={`flex gap-2.5 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 {msg.role === 'model' && (
-                  <div className="w-7 h-7 rounded-lg bg-cyan-950 border border-cyan-800/80 flex-shrink-0 flex items-center justify-center text-cyan-400 mt-0.5">
+                  <div className="w-7 h-7 rounded-lg bg-cyan-100 dark:bg-cyan-950 border border-cyan-300 dark:border-cyan-800/80 flex-shrink-0 flex items-center justify-center text-cyan-700 dark:text-cyan-400 mt-0.5">
                     <Sparkles className="w-3.5 h-3.5" />
                   </div>
                 )}
 
                 <div
-                  className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 shadow-md ${
+                  className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 shadow-sm sm:shadow-md ${
                     msg.role === 'user'
                       ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-br-sm'
-                      : 'bg-slate-900 border border-slate-800 text-slate-200 rounded-bl-sm'
+                      : 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 rounded-bl-sm'
                   }`}
                 >
                   {renderFormattedText(msg.content)}
                 </div>
 
                 {msg.role === 'user' && (
-                  <div className="w-7 h-7 rounded-lg bg-blue-900 border border-blue-700 flex-shrink-0 flex items-center justify-center text-blue-200 mt-0.5">
+                  <div className="w-7 h-7 rounded-lg bg-blue-100 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 flex-shrink-0 flex items-center justify-center text-blue-700 dark:text-blue-200 mt-0.5">
                     <User className="w-3.5 h-3.5" />
                   </div>
                 )}
@@ -220,10 +220,10 @@ export const GeminiAssistantWidget = () => {
 
             {isLoading && (
               <div className="flex gap-2.5 justify-start items-center">
-                <div className="w-7 h-7 rounded-lg bg-cyan-950 border border-cyan-800/80 flex-shrink-0 flex items-center justify-center text-cyan-400">
+                <div className="w-7 h-7 rounded-lg bg-cyan-100 dark:bg-cyan-950 border border-cyan-300 dark:border-cyan-800/80 flex-shrink-0 flex items-center justify-center text-cyan-700 dark:text-cyan-400">
                   <Sparkles className="w-3.5 h-3.5 animate-spin" />
                 </div>
-                <div className="rounded-2xl rounded-bl-sm px-4 py-2.5 bg-slate-900 border border-slate-800 text-slate-400 flex items-center gap-1.5 text-xs font-mono">
+                <div className="rounded-2xl rounded-bl-sm px-4 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 flex items-center gap-1.5 text-xs font-mono shadow-sm">
                   <span>Gemini is thinking</span>
                   <span className="animate-bounce">.</span>
                   <span className="animate-bounce delay-100">.</span>
@@ -241,7 +241,7 @@ export const GeminiAssistantWidget = () => {
               e.preventDefault();
               handleSend();
             }}
-            className="p-3 sm:p-3.5 bg-slate-900 border-t border-slate-800 flex items-center gap-2"
+            className="p-3 sm:p-3.5 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 flex items-center gap-2"
           >
             <input
               ref={inputRef}
@@ -250,19 +250,19 @@ export const GeminiAssistantWidget = () => {
               onChange={(e) => setInput(e.target.value)}
               placeholder="Tanungin si Eyhan AI tungkol sa projects o skills..."
               disabled={isLoading}
-              className="flex-1 bg-slate-950 border border-slate-700/80 focus:border-cyan-500 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none transition-colors"
+              className="flex-1 bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700/80 focus:border-cyan-500 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none transition-colors"
             />
             <button
               type="submit"
               disabled={isLoading || !input.trim()}
-              className="p-2.5 sm:p-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white hover:opacity-90 active:scale-95 disabled:opacity-40 disabled:pointer-events-none transition-all shadow-md flex-shrink-0"
+              className="p-2.5 sm:p-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white hover:opacity-90 active:scale-95 disabled:opacity-40 disabled:pointer-events-none transition-all shadow-md flex-shrink-0 cursor-pointer"
             >
               <Send className="w-4 h-4" />
             </button>
           </form>
 
           {/* Footer note */}
-          <div className="px-3 py-1.5 bg-slate-950 text-center text-[10px] font-mono text-slate-500 border-t border-slate-900 flex items-center justify-between px-4">
+          <div className="px-3 py-1.5 bg-slate-100 dark:bg-slate-950 text-center text-[10px] font-mono text-slate-500 border-t border-slate-200 dark:border-slate-900 flex items-center justify-between px-4">
             <span>✨ Saved in browser cache</span>
             <span>Powered by Google Gemini</span>
           </div>

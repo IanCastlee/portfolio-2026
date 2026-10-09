@@ -1,15 +1,12 @@
 import React from 'react';
 import { MainLayout } from '../templates/MainLayout';
-import { HeroSection } from '../organisms/HeroSection';
-import { AboutSection, TechStackSection } from '../organisms/AboutAndTechSections';
-import { ProjectsSection, CaseStudiesSection } from '../organisms/ProjectsAndCaseStudiesSections';
-import { ExperienceSection, ServicesSection, ProcessSection } from '../organisms/MiddleSections';
-import { ResumeSection, EducationSection, TestimonialsSection, ContactSection } from '../organisms/EndingSections';
+import { ProfileBannerHeader } from '../organisms/ProfileBannerHeader';
+import { BentoProfileFeed } from '../organisms/BentoProfileFeed';
 import { portfolioData } from '../../data/portfolioData';
 
 /**
  * Page: PortfolioPage
- * Composes the entire portfolio using Atomic Design components.
+ * Modern Developer Hub & Bento Profile Layout inspired by castillo-ian.vercel.app
  */
 export const PortfolioPage = () => {
   const { 
@@ -20,47 +17,27 @@ export const PortfolioPage = () => {
     experiences, 
     services, 
     process, 
-    education, 
-    testimonials 
+    education 
   } = portfolioData;
 
   return (
     <MainLayout developer={developer}>
-      {/* 01. HERO SECTION (Mobile Optimized) */}
-      <HeroSection developer={developer} />
+      <div className="pt-20 sm:pt-28 px-0 sm:px-4">
+        {/* 01. Cover Banner & Profile Header */}
+        <ProfileBannerHeader developer={developer} />
 
-      {/* 02. ABOUT SECTION */}
-      <AboutSection developer={developer} />
-
-      {/* 03. TECH STACK SECTION */}
-      <TechStackSection techStack={techStack} />
-
-      {/* 04. FEATURED PROJECTS SECTION */}
-      <ProjectsSection projects={projects} />
-
-      {/* 05. CASE STUDIES SECTION */}
-      <CaseStudiesSection caseStudy={caseStudy} />
-
-      {/* 06. EXPERIENCE SECTION */}
-      <ExperienceSection experiences={experiences} />
-
-      {/* 07. SERVICES SECTION */}
-      <ServicesSection services={services} />
-
-      {/* 08. DEVELOPMENT PROCESS SECTION */}
-      <ProcessSection process={process} />
-
-      {/* 09. RESUME DOWNLOAD SECTION */}
-      <ResumeSection />
-
-      {/* 10. EDUCATION */}
-      <EducationSection education={education} />
-
-      {/* 11. TESTIMONIALS SECTION */}
-      <TestimonialsSection testimonials={testimonials} />
-
-      {/* 12. CONTACT SECTION */}
-      <ContactSection developer={developer} />
+        {/* 02. Bento 2-Column Developer Feed */}
+        <BentoProfileFeed
+          developer={developer}
+          techStack={techStack}
+          projects={projects}
+          caseStudy={caseStudy}
+          experiences={experiences}
+          services={services}
+          process={process}
+          education={education}
+        />
+      </div>
     </MainLayout>
   );
 };

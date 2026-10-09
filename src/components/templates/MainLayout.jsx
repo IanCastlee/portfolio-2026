@@ -9,7 +9,7 @@ import { GeminiAssistantWidget } from '../organisms/GeminiAssistantWidget';
  */
 export const MainLayout = ({ children, developer }) => {
   return (
-    <div className="min-h-screen bg-[#0b0f19] text-slate-200 font-sans selection:bg-blue-600 selection:text-white flex flex-col justify-between relative">
+    <div className="min-h-screen bg-slate-50 dark:bg-[#0b0f19] text-slate-800 dark:text-slate-200 font-sans selection:bg-blue-600 selection:text-white flex flex-col justify-between relative transition-colors duration-200">
       <Navbar developer={developer} />
       <main className="flex-1">
         {children}
@@ -20,4 +20,3 @@ export const MainLayout = ({ children, developer }) => {
     </div>
   );
 };
-
