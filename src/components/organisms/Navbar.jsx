@@ -116,7 +116,7 @@ export const Navbar = ({ developer }) => {
             </a>
           ))}
           <div className="pt-3 border-t border-slate-200 dark:border-slate-800 flex gap-2.5">
-            <Button variant="outline" size="sm" href="#resume" className="flex-1 border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300" onClick={() => setIsOpen(false)}>
+            <Button variant="outline" size="sm" href="/Ian_Castillo_CV.pdf" target="_blank" rel="noopener noreferrer" className="flex-1 border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300" onClick={() => setIsOpen(false)}>
               CV
             </Button>
             <Button variant="primary" size="sm" href="#contact" className="flex-1" onClick={() => setIsOpen(false)}>

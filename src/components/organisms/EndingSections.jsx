@@ -36,7 +36,7 @@ export const ResumeSection = () => (
       </div>
 
       <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-        <Button variant="primary" size="md" href="#" icon={FileDown} className="w-full sm:w-auto">
+        <Button variant="primary" size="md" href="/Ian_Castillo_CV.pdf" target="_blank" rel="noopener noreferrer" icon={FileDown} className="w-full sm:w-auto">
           Download CV (PDF)
         </Button>
         <Button variant="secondary" size="md" href="#about" icon={Eye} className="w-full sm:w-auto">

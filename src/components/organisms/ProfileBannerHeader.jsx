@@ -62,6 +62,11 @@ export const ProfileBannerHeader = ({ developer }) => {
       label: "Sqlite",
       bg: "hover:border-blue-500/50 text-blue-700 dark:text-blue-400",
     },
+    {
+      name: "Redis",
+      label: "Redis Caching",
+      bg: "hover:border-red-500/50 text-red-600 dark:text-red-400",
+    },
   ];
 
   return (
