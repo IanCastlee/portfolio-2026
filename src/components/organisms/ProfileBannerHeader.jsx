@@ -67,6 +67,16 @@ export const ProfileBannerHeader = ({ developer }) => {
       label: "Redis Caching",
       bg: "hover:border-red-500/50 text-red-600 dark:text-red-400",
     },
+    {
+      name: "AI Agents",
+      label: "Autonomous AI Agents / Tool Calling",
+      bg: "hover:border-purple-500/50 text-purple-600 dark:text-purple-400",
+    },
+    {
+      name: "Gemini AI",
+      label: "Google Gemini API Function Calling",
+      bg: "hover:border-blue-500/50 text-blue-600 dark:text-blue-400",
+    },
   ];
 
   return (
@@ -160,6 +170,8 @@ export const ProfileBannerHeader = ({ developer }) => {
                 <span className="text-blue-700 dark:text-blue-300 font-medium">"Tauri"</span>
                 <span className="text-slate-500 dark:text-slate-400">, </span>
                 <span className="text-purple-700 dark:text-purple-300 font-medium">"Redis"</span>
+                <span className="text-slate-500 dark:text-slate-400">, </span>
+                <span className="text-cyan-600 dark:text-cyan-300 font-medium">"AI-Agents"</span>
                 <span className="text-slate-500 dark:text-slate-400">]</span>
                 <span className="text-slate-500">,</span>
               </div>

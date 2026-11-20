@@ -7,7 +7,7 @@ export const portfolioData = {
   developer: {
     name: "Ian Castillo",
     shortName: "<eyhan/>",
-    role: "IT Web & Mobile App Developer",
+    role: "IT Web & Mobile Full-Stack Developer | AI & Workflow Automation",
     availability: "Available for Full-time & Projects",
     location: "Pasig, Philippines",
     email: "castillo321ian@gmail.com",
@@ -17,9 +17,9 @@ export const portfolioData = {
     projectsCompleted: "25+",
     commitmentRate: "100%",
     heroIntro:
-      "Full-Stack Web & Mobile Developer building clean, responsive interfaces backed by solid backend architecture. I don't just focus on visuals — I make sure the server, database, and system performance stay fast, efficient, and reliable under load. Freelancing since 2023.",
-    bio1: "I am a full-stack developer based in the Philippines with a BS in Information Technology. Since starting freelance development in 2023, I've built and delivered custom software solutions — from mission-critical emergency GIS applications to offline desktop grading tools and multi-vendor marketplaces.",
-    bio2: "My focus is simple: clean code, solid database design, and snappy user interfaces. I work across the stack with React, React Native, PHP, Laravel, Node.js, MySQL, Redis, and modern AI engineering workflows using Google Antigravity and Claude AI.",
+      "Full-Stack Web & Mobile Developer building high-performance web applications, cross-platform mobile apps, and autonomous AI agents backed by solid backend architecture. Experienced in Redis caching, API rate limiting & throttling, dynamic load balancing, and Role-Based Access Control (RBAC). Freelancing since 2023.",
+    bio1: "I am a full-stack developer based in the Philippines with a BS in Information Technology. Since starting freelance development in 2023, I've built and delivered custom software solutions — from autonomous conversational AI agents and mission-critical emergency GIS applications to offline desktop grading tools and multi-vendor marketplaces.",
+    bio2: "My focus is simple: clean code, solid database design, snappy user interfaces, and automated workflows. I work across the stack with React, React Native, PHP, Laravel, Node.js, MySQL, Redis, Google Gemini API (Function / Tool Calling), and modern AI engineering workflows.",
     quote:
       "Building practical, reliable software that solves real problems and scales smoothly.",
     socials: {
@@ -78,11 +78,14 @@ export const portfolioData = {
       ],
     },
     {
-      category: "Auth & Security",
+      category: "Architecture & Security",
       icon: "Shield",
-      desc: "User identity protection, token handling, and session authentication.",
+      desc: "API rate limiting & throttling, load balancing, token handling, and RBAC.",
       skills: [
-        { name: "JWT", level: "Advanced" },
+        { name: "Rate Limiting & Throttling", level: "Advanced" },
+        { name: "Dynamic Load Balancing", level: "Advanced" },
+        { name: "Role-Based Access Control (RBAC)", level: "Advanced" },
+        { name: "JWT Authentication", level: "Advanced" },
         { name: "Session Management", level: "Advanced" },
       ],
     },
